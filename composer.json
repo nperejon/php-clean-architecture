@@ -1,0 +1,23 @@
+{
+    "name": "calen/boilerplate",
+    "description": "Boilerplate to applications",
+    "type": "project",
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "guzzlehttp/guzzle": "^7.0",
+        "coffeecode/router": "^1.0",
+        "erandir/plug-route": "^4.3",
+        "jenssegers/blade": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Nicolas Amorim",
+            "email": "nicolas.amorim@dampa.com.br"
+        }
+    ]
+}
