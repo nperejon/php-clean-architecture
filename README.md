@@ -45,7 +45,7 @@ A Arquitetura Limpa é composta por várias camadas, cada uma delas poderá ser 
 O projeto está estruturado por pastas dentro da pasta **src**, não necessariamente projetos de Arquitetura Limpa precisam seguir um único esquema de pastas, sendo que, a verdadeira importância está em como é estruturado o código e as comunicações de camadas.
 
 - Domain - Dentro da pasta domain estão presentes entidades importantes para a regra de negócio da aplicação, são a base para todo o sistema e as principais abstrações para qual o software irá funcionar. Também está presente nessa pasta os _value objects_, um objeto de valor que representa uma entidade simples que contém alguma regra porém não ao ponto de se tornar uma entidade do sistema, a aplicação não tem um value object como base e pode ou não ser compartilhada em várias entidades. Também estão presentes interfaces de repositórios para o consumo de bancos de dados externos e _exceptions_ próprios da camada de domínio.
-- Usecases - Camada da aplicação que implementa casos de uso para as entidades, também conhecida como camada de aplicação estão presentes as principais funcionalidades pelas quais o usuário poderá se deparar em seu fluxo de requisições durante o uso do software.
+- Application - Camada da aplicação que implementa casos de uso para as entidades, também conhecida como camada de aplicação estão presentes as principais funcionalidades pelas quais o usuário poderá se deparar em seu fluxo de requisições durante o uso do software.
 - Infra - A pasta de infra contém adaptações de frameworks e drivers externos para utilização adequada dentro do sistema, como também implementação das interfaces de repositórios e controllers para comunicação de requisição e resposta do usuário da aplicação.
 - Security - Camada para implementações de mecanismos de segurança da aplicação.
 - Main - A camada conhecida como a mais "suja" da aplicação, aqui são juntas todas as peças desse grande quebra-cabeça através de _factories_ para que a aplicação funcione. As rotas também são estabelecidas nessa camada.
@@ -62,7 +62,7 @@ $ git clone git@github.com:Nick3n/php-clean-architecture.git
 # Acesse a pasta do projeto no terminal/cmd
 $ cd php-clean-architecture
 
-# Sete as variáveis ambiente em env.php
+# Sete as variáveis de ambiente em .env
 
 # Instale as dependências do projeto
 $ php composer.phar update

@@ -1,23 +1,38 @@
 {
-    "name": "calen/boilerplate",
-    "description": "Boilerplate to applications",
-    "type": "project",
-    "require": {
-        "phpunit/phpunit": "^9.5",
-        "guzzlehttp/guzzle": "^7.0",
-        "coffeecode/router": "^1.0",
-        "erandir/plug-route": "^4.3",
-        "jenssegers/blade": "^1.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "App\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Nicolas Amorim",
-            "email": "nicolas.amorim@dampa.com.br"
-        }
-    ]
+  "name": "calen/boilerplate",
+  "description": "Boilerplate to applications",
+  "type": "project",
+  "require-dev": {
+      "pestphp/pest": "^1.21"
+  },
+  "require": {
+    "fzaninotto/faker": "^1.5",
+    "vlucas/phpdotenv": "^5.4",
+    "aura/router": "^3.2",
+    "laminas/laminas-diactoros": "^2.8",
+    "mezon/router": "^1.3",
+    "klein/klein": "^2.1",
+    "coffeecode/router": "^1.0",
+    "guzzlehttp/guzzle": "^7.4"
+  },
+  "scripts": {
+    "test": "vendor/bin/pest",
+    "test:coverage": "vendor/bin/pest --coverage"
+  },
+  "autoload": {
+    "psr-4": {
+        "App\\": "src/"
+    }
+  },
+  "authors": [
+      {
+          "name": "Nicolas Amorim",
+          "email": "nicolas.amorim@dampa.com.br"
+      }
+  ],
+  "config": {
+    "allow-plugins": {
+      "pestphp/pest-plugin": true
+    }
+  }
 }
